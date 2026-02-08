@@ -143,6 +143,19 @@ Stores and manages multiple place objects.
     Expected Output:
     book.places.length === 0
 ---
+## User Interface Logic
+- Users submit a form to add a place.
+- JavaScript creates a **Place object** and stores it in a **PlaceBook.**
+- The list of places displays dynamically.
+- Clicking a place name displays its details.
+- Delete buttons remove a place and update the UI immediately.
+
+---
+## Known Bugs
+No known bugs
+
+---
+
 
 
 
