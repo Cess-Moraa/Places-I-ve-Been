@@ -35,6 +35,13 @@ Cecilia Moraa
 
 or double-click the file
 
+---
 ## Application Features
+- **Add Places:** Users can add a place with location, landmarks, season, and optional notes.
+- **View Details:** Clicking a place name shows all its details.
+- **Delete Places:** Users can remove a place using the Delete button.
+- **Dynamic UI:** The list of places updates automatically after adding or deleting.
+- **Separate Logic:** Business logic (constructors & prototypes) is separated from UI logic.
 
+---
 
