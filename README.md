@@ -95,6 +95,7 @@ Stores and manages multiple place objects.
     };
 ---
 # Test-Driven Development (TDD)
+---
 ## Tests for place
     Describe: Place()
     Test: It should create a place object with correct properties
@@ -105,5 +106,43 @@ Stores and manages multiple place objects.
     place.landmarks === "National Park"
     place.season === "Dry"
     place.notes === "Beautiful city"
+ ---
+    Describe: Place.prototype.getDetails()
+    Test: It should return a full description of the place
+    Code:
+    place.getDetails();
+    Expected Output:
+    "Location: Nairobi, Landmarks: National Park, Season: Dry, Notes: Beautiful city"
+
+## Tests for Placebook
+    Describe: PlaceBook()
+    Test: It should create an empty place book
+    Code:
+    const book = new PlaceBook();
+    Expected Output:
+    book.places.length === 0
+---
+    Describe: PlaceBook.prototype.addPlace()
+    Test: It should add a place to the place book
+    Code:
+    book.addPlace(place);
+    Expected Output:
+    book.places.length === 1
+---
+    Describe: PlaceBook.prototype.findPlace()
+    Test: It should find a place by location
+    Code:
+    book.findPlace("Nairobi");
+    Expected Output:
+    Place { location: "Nairobi", ... }
+---
+    Describe: PlaceBook.prototype.deletePlace()
+    Test: It should remove a place by location
+    Code:
+    book.deletePlace("Nairobi");
+    Expected Output:
+    book.places.length === 0
+---
+
 
 
