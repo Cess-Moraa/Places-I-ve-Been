@@ -13,3 +13,6 @@ Place.prototype.getDetails = function () {
          " | Season: " + this.season +
          " | Notes: " + this.notes;
 };
+function PlaceBook() {
+  this.places = [];
+}
