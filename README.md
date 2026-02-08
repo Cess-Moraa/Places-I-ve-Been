@@ -45,25 +45,33 @@ or double-click the file
 
 ---
 # Business Logic
+---
 ## Place Contructor
 Creates a place object with multiple properties.
 
     function Place(location, landmarks, season, notes) {
-    this.location = location;
-    this.landmarks = landmarks;
-    this.season = season;
-    this.notes = notes;
+        this.location = location;
+        this.landmarks = landmarks;
+        this.season = season;
+        this.notes = notes;
     } 
-
+---
 ## Prototype Method
 Get the full details of a place.
 
     Place.prototype.getDetails = function (){
-     return "Location: " + this.location +
-         ", Landmarks: " + this.landmarks +
-         ", Season: " + this.season +
-         ", Notes: " + this.notes;
+        return "Location: " + this.location +
+            ", Landmarks: " + this.landmarks +
+            ", Season: " + this.season +
+            ", Notes: " + this.notes;
     };
+---
+## PlaceBook Constructor
+Stores and manages multiple place objects.
 
+    function PlaceBook() {
+        this.places = [];
+    }
+---
 
 
