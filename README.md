@@ -73,5 +73,27 @@ Stores and manages multiple place objects.
         this.places = [];
     }
 ---
+## PlaceBook Prototype Methods
+
+    // Add a place
+    PlaceBook.prototype.addPlace = function(place) {
+        this.places.push(place);
+    };
+
+    // Find a place by location
+    PlaceBook.prototype.findPlace = function(location) {
+        return this.places.find(function(place) {
+            return place.location === location;
+        });
+    };
+
+    // Delete a place by location
+    PlaceBook.prototype.deletePlace = function(location) {
+        this.places = this.places.filter(function(place) {
+            return place.location !== location;
+        });
+    };
+---
+
 
 
