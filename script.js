@@ -43,3 +43,27 @@ PlaceBook.prototype.deletePlace = function (location) {
   });
 };
 
+//UI LOGIC
+const placeBook = new PlaceBook();
+
+// Handle form submission
+document.getElementById("place-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const location = document.getElementById("location").value.trim();
+  const landmarks = document.getElementById("landmarks").value.trim();
+  const season = document.getElementById("season").value.trim();
+  const notes = document.getElementById("notes").value.trim();
+
+  if (!location || !landmarks || !season) {
+    alert("Please fill in location, landmarks, and season.");
+    return;
+  }
+
+  const place = new Place(location, landmarks, season, notes);
+  placeBook.addPlace(place);
+
+  displayPlaces();
+  this.reset();
+});
+
