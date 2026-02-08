@@ -7,13 +7,34 @@ Places I’ve Been is a simple JavaScript web application that lets users keep t
    - Delete a place from the list
 
 This project demonstrates JavaScript constructors, prototypes, and test-driven development (TDD). The UI updates dynamically using JavaScript DOM manipulation.
+
 ---
 ## Author
 Cecilia Moraa
+
 ---
 ## Technologies Used
 - HTML
 - CSS
 - JavaScript
 - Git & Github
+
 ---
+## Project Setup Instructions
+1. Clone the repository:
+
+       git clone https://github.com/your-username/places-youve-been.git
+
+2. Navigate into the project directory:
+
+       cd placeshavebeen
+
+3. Open index.html in your browser:
+
+        open index.html
+
+or double-click the file
+
+## Application Features
+
+
