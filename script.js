@@ -16,3 +16,12 @@ Place.prototype.getDetails = function () {
 function PlaceBook() {
   this.places = [];
 }
+PlaceBook.prototype.addPlace = function (place) {
+  this.places.push(place);
+};
+
+PlaceBook.prototype.findPlace = function (location) {
+  return this.places.find(function (place) {
+    return place.location === location;
+  });
+};
