@@ -67,3 +67,39 @@ document.getElementById("place-form").addEventListener("submit", function (event
   this.reset();
 });
 
+// Display places
+function displayPlaces() {
+  const list = document.getElementById("places-list");
+  list.innerHTML = "";
+
+  placeBook.places.forEach(function (place) {
+    const li = document.createElement("li");
+
+    // Place name clickable for details
+    const nameSpan = document.createElement("span");
+    nameSpan.textContent = place.location;
+    nameSpan.className = "place-name";
+
+    nameSpan.addEventListener("click", function () {
+      document.getElementById("place-details").textContent =
+        place.getDetails();
+    });
+
+    // Delete button
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete-btn";
+
+    deleteButton.addEventListener("click", function () {
+      placeBook.deletePlace(place.location);
+      document.getElementById("place-details").textContent =
+        "Click a place to view details";
+      displayPlaces();
+    });
+
+    li.appendChild(nameSpan);
+    li.appendChild(deleteButton);
+    list.appendChild(li);
+  });
+}
+
