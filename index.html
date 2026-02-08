@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vPlaces I've Been</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Places I've Been 🌍</h1>
+
+  <form id="place-form">
+    <label>
+      Location:
+      <input type="text" id="location" required>
+    </label>
+
+    <label>
+      Landmarks:
+      <input type="text" id="landmarks" required>
+    </label>
+
+    <label>
+      Time of Year:
+      <input type="text" id="season" required>
+    </label>
+
+    <label>
+      Notes:
+      <input type="text" id="notes">
+    </label>
+
+    <button type="submit">Add Place</button>
+  </form>
+
+  <h2>My Places</h2>
+  <ul id="places-list"></ul>
+
+  <h2>Place Details</h2>
+  <p id="place-details">Click a place to view details</p>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
