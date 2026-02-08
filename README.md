@@ -44,4 +44,13 @@ or double-click the file
 - **Separate Logic:** Business logic (constructors & prototypes) is separated from UI logic.
 
 ---
+# Business Logic
+## Place Contructor
+    function Place(location, landmarks, season, notes) {
+    this.location = location;
+    this.landmarks = landmarks;
+    this.season = season;
+    this.notes = notes;
+    } 
+
 
