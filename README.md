@@ -94,6 +94,16 @@ Stores and manages multiple place objects.
         });
     };
 ---
-
+# Test-Driven Development (TDD)
+## Tests for place
+    Describe: Place()
+    Test: It should create a place object with correct properties
+    Code:
+    const place = new Place("Nairobi", "National Park", "Dry", "Beautiful city");
+    Expected Output:
+    place.location === "Nairobi"
+    place.landmarks === "National Park"
+    place.season === "Dry"
+    place.notes === "Beautiful city"
 
 
