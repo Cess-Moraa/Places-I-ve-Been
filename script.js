@@ -1,3 +1,5 @@
+//BUSINESS LOGIC
+
 function Place(location, landmarks, season, notes) {
   this.location = location;
   this.landmarks = landmarks;
@@ -23,5 +25,10 @@ PlaceBook.prototype.addPlace = function (place) {
 PlaceBook.prototype.findPlace = function (location) {
   return this.places.find(function (place) {
     return place.location === location;
+  });
+};
+PlaceBook.prototype.deletePlace = function (location) {
+  this.places = this.places.filter(function (place) {
+    return place.location !== location;
   });
 };
